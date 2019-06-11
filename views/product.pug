@@ -1,0 +1,28 @@
+extends mainlayout.pug
+block content
+    table.table.table-striped
+        thead
+            tr        
+                th(scope='col') name
+                th(scope='col') picture 
+                th(scope='col') mua       
+        tbody
+            each item in arr
+                tr        
+                td=item.name
+                td
+                    img(src=item.img style="width:100px;height:100px")
+                td
+                    button.btn.btn-primary(type='button') Mua
+    nav(aria-label='...')
+    ul.pagination.pagination-sm
+        -for(var i =1 ;i<=tongsotrang;i++)
+            -var pos = (i-1)*sosanphamcanlay;        
+            li.page-item(class={active:pos===page})
+                a.page-link(href="/product?page="+pos)=i    
+            
+ 
+            
+                
+
+
