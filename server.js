@@ -1,7 +1,7 @@
 const express = require("express");
 const axios = require("axios");
 let app = express();
-let port = 9000;
+let port = process.env.PORT || 9000;
 
 let a = ["tuan", "hoang", "thuan"];
 
